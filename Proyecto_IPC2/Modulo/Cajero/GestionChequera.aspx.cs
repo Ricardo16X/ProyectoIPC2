@@ -244,8 +244,11 @@ namespace Proyecto_IPC2.Modulo.Cajero
                 else if (upChequera.Checked)
                 {
                     //Actualizar Solicitud de Chequera...
-
-
+                    SqlCommand comando = new SqlCommand("UPDATE chequera set FK_idCliente = " + Convert.ToInt32(txtCodClient.Text), conexion);
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+                    mensaje("Chequera con datos Actualizada");
                     limpiar();
                 }
                 else if (delChequera.Checked)
