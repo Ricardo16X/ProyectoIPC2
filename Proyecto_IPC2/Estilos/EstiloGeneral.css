@@ -1,0 +1,101 @@
+﻿*{
+    padding:0;
+    box-sizing:border-box;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+#contenedor {
+    /*Ancho de Contenedor de Contenido*/
+    width: 700px;
+    margin: auto;
+}
+    /*Barra de Navegación*/
+    #contenedor nav {
+        display:flex;
+        background-color: cadetblue;
+        height: 32px;
+        align-items:center;
+        justify-content:space-around;
+    }
+
+    #contenedor nav a {
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: white;
+        padding:6px;
+        -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+        transition: 0.3s;
+        vertical-align:middle;
+        width:100%;
+        text-align:center;
+    }
+#contenedor nav a:hover{
+    background-color:black;
+    color:cadetblue;
+}
+    /*Fin Barra de Navegación*/
+
+#contenido{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding:20px;
+    width:700px;
+    margin:auto;
+}
+
+#contenido h2{
+    text-align:center;
+}
+
+body {
+    background-color:white;
+}
+
+.textbox{
+    width:200px;
+    height:25px;
+    border:1px solid black;
+}
+
+.label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:15px;
+}
+
+.radioButton{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:15px;
+    font-style:normal;
+    text-align:center;
+}
+
+#contenido .botonOperacion {
+    text-align: center;
+}
+
+.boton {
+    height: 40px;
+    width: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    border: solid 2px black;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: 0.3s;
+}
+.boton:hover{
+    background-color:black;
+    color:white;
+    border-color:dodgerblue;
+}
+
+/*Solamente para el área de contraseñas*/
+.datos,
+.acceso {
+    text-align: center;
+}
