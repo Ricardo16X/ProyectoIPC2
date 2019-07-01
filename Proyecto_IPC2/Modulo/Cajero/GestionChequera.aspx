@@ -11,13 +11,15 @@
         #contenedor {
             width: 1000px;
         }
-        #separador{
-            display:flex;
-            justify-content:space-between;
+
+        #separador {
+            display: flex;
+            justify-content: space-between;
         }
+
         #opciones,
-        #botoncito{
-            width:50%;
+        #botoncito {
+            width: 50%;
         }
     </style>
 </head>
@@ -32,7 +34,10 @@
                 <a href="../../Cuentas/Login.aspx">Cerrar Sesión</a>
             </nav>
             <div id="contenido">
-                <h2>Gestión de Chequeras</h2>
+                <h2>Gestión de Chequeras
+                    <br />
+                    <asp:Label Text="Turno # " runat="server" ID="lblTurno" CssClass="label" Font-Size="20px" BackColor="Black" ForeColor="White" Height="30px" Width="150px" />
+                </h2>
                 <div id="separador">
                     <div id="opciones">
                         <strong><em>Acción:</em></strong>
@@ -46,12 +51,9 @@
                         <asp:RadioButton Text="   Entregar Chequera" runat="server" ID="darChequera" CssClass="radioButton" AutoPostBack="True" OnCheckedChanged="darChequera_CheckedChanged" GroupName="opcionChequera" />
                     </div>
                     <div id="botoncito">
-                        <asp:Button ID="Button1" runat="server" Text="Guardar Trabajo" CssClass="boton" Width="150px" OnClick="Button1_Click"/>
+                        <asp:Button ID="Button1" runat="server" Text="Guardar Trabajo" CssClass="boton" Width="150px" OnClick="Button1_Click" />
                     </div>
                 </div>
-                <br />
-                <br />
-                <asp:Label Text="Turno # " runat="server" ID="lblTurno" CssClass="label" />
                 <br />
                 <br />
                 <asp:Label Text="Fecha:" runat="server" ID="fechaActual" CssClass="label" />

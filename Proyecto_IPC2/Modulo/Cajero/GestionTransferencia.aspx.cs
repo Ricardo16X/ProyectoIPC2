@@ -50,12 +50,12 @@ namespace Proyecto_IPC2.Modulo.Cajero
                 }
                 if (!hayDatos)
                 {
-                    turno.Text = "No hay solicitudes en cola actualmente.";
+                    turno.Text = "Libre";
                 }
             }
             else
             {
-                turno.Text = "No hay solicitudes en cola actualmente.";
+                turno.Text = "Libre";
                 btnOperacion.Enabled = false;
                 limpiar();
             }

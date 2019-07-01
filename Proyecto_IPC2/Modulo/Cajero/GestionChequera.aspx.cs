@@ -82,11 +82,11 @@ namespace Proyecto_IPC2.Modulo.Cajero
                         break;
                     }
                 }
-                if (!hayDatos) { lblTurno.Text = "No hay solicitudes en cola actualmente."; btnOperacion.Enabled = false; limpiar(); }
+                if (!hayDatos) { lblTurno.Text = "Libre"; btnOperacion.Enabled = false; limpiar(); }
             }
             else
             {
-                lblTurno.Text = "No hay solicitudes en cola actualmente.";
+                lblTurno.Text = "Libre";
                 btnOperacion.Enabled = false;
                 limpiar();
             }
@@ -116,6 +116,7 @@ namespace Proyecto_IPC2.Modulo.Cajero
                 //Verificar que el estado de la chequera sea IMPRESO y que la Chequera Exista
                 SqlCommand comando = new SqlCommand("select FK_codEstado,FK_idCliente from chequera where FK_codEstado = " + 2
                     + "and idChequera = " + Convert.ToInt32(txtCodChequera.Text), conexion);
+                conexion.Open();
                 SqlDataReader lector = comando.ExecuteReader();
                 if (lector.Read())
                 {
@@ -127,6 +128,8 @@ namespace Proyecto_IPC2.Modulo.Cajero
                     txtCodChequera.Text = "";
                     txtCodClient.Text = "";
                 }
+                conexion.Close();
+                lector.Close();
             }
         }
 

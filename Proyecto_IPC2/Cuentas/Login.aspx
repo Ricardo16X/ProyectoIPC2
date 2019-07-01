@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body>
+<body id="loginASPX">
     <form id="form1" runat="server">
         <div id="contenedor">
             <div id="contenido">

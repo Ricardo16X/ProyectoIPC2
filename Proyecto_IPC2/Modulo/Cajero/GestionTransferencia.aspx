@@ -24,10 +24,10 @@
                 <a href="../../Cuentas/Login.aspx">Cerrar Sesión</a>
             </nav>
             <div id="contenido">
-                <h2>Gestión de Transferencias Interbancarias</h2>
-                <asp:Label Text="# Turno: " runat="server" id="turno" Font-Size="20px"/>
-                <br />
-                <br />
+                <h2>Gestión de Transferencias Interbancarias
+                    <br />
+                    <asp:Label Text="# Turno: " runat="server" id="turno" Font-Size="20px"  BackColor="Black" ForeColor="White" Height="30px" Width="150px" />
+                </h2>
                 <p>
                     <strong>
                         <em>Acción:</em>
@@ -50,9 +50,9 @@
                 <asp:TextBox ID="TextBox1" runat="server" AutoPostBack="True" OnTextChanged="TextBox1_TextChanged" CssClass="textbox"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Label Text="Código Cliente: " runat="server" />&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="ID Cliente: " runat="server" />&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtcodCliente" runat="server" CssClass="textbox" AutoPostBack="True" OnTextChanged="txtcodCliente_TextChanged"></asp:TextBox>
-                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label Text="Banco Destino: " runat="server" />&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtbancoDestino" runat="server" CssClass="textbox"></asp:TextBox>
                 <br />
@@ -66,7 +66,7 @@
                 <br />
                 <asp:Label Text="Hora Inicio: " runat="server" />&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtHoraInicio" runat="server" CssClass="textbox"></asp:TextBox>
-                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label Text="Hora Final: " runat="server" />&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtHoraFinal" runat="server" CssClass="textbox"></asp:TextBox>
                 <br />
