@@ -63,19 +63,18 @@
                 </div>
                 <br />
                 <br />
-                <asp:Label Text="Código Trabajador:" runat="server" ID="lblCodigo" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="Código Trabajador" runat="server" ID="lblCodigo" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtCodigoCliente" runat="server" AutoPostBack="True" OnTextChanged="txtCodigoCliente_TextChanged" CssClass="textbox"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Label Text="DPI:     " runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="DPI" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox runat="server" ID="txtDPI" CssClass="textbox" />
                 <br />
                 <br />
-                <asp:Label Text="Nombre:  " runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="Nombre" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox runat="server" ID="txtNombre" CssClass="textbox" />
-                <br />
-                <br />
-                <asp:Label Text="Apellido " runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="Apellido " runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox runat="server" ID="txtApellido" CssClass="textbox" />
                 <br />
                 <br />
@@ -83,19 +82,14 @@
                 <asp:TextBox runat="server" ID="txtFechaNac" CssClass="textbox" />
                 <br />
                 <br />
-                <asp:Label Text="E-Mail" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="E-Mail" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox runat="server" ID="txtEmail" CssClass="textbox" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="Teléfono" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtTel" CssClass="textbox" />
                 <br />
                 <br />
-                <asp:Label Text="Teléfono" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox runat="server" ID="txtTel" CssClass="textbox" />
-                <br />
-                <br />
-                <asp:Label Text="Usuario" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox runat="server" ID="txtUser" CssClass="textbox" />
-                <br />
-                <br />
-                <asp:Label Text="Contraseña" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label Text="Usuario" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtUser" CssClass="textbox" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label Text="Contraseña" runat="server" CssClass="label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox runat="server" ID="txtPass" CssClass="textbox" />
                 <br />
                 <br />

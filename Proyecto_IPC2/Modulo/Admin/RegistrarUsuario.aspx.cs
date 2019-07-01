@@ -14,15 +14,26 @@ namespace Proyecto_IPC2.Modulo.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["rol"].ToString() == "administrador")
+            if (!IsPostBack)
             {
-                txtFechaNac.Attributes.Add("placeholder", "dd/mm/aaaa");
+                if (Session["rol"] != null)
+                {
+                    if (Session["rol"].ToString() == "administrador")
+                    {
+                        txtFechaNac.Attributes.Add("placeholder", "dd/mm/aaaa");
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Cuentas/Login.aspx");
+                        Session["rol"] = null;
+                    }
+                }
+                else
+                {
+                    Response.Redirect("~/Cuentas/Login.aspx");
+                }
             }
-            else
-            {
-                Response.Redirect("~/Cuentas/Login.aspx");
-                Session["rol"] = null;
-            }
+            
         }
 
         public void BotonEnviar_Click(object sender, EventArgs e)
@@ -133,7 +144,8 @@ namespace Proyecto_IPC2.Modulo.Admin
 
         protected void txtCodigoCliente_TextChanged(object sender, EventArgs e)
         {
-            string txtComando = "Select dpi,nombre,apellido,fechaNacimiento,correo,telefono,usuario,contraseña,palabraClave from trabajador where idTrabajador = " + Convert.ToInt32(txtCodigoCliente.Text);
+            string txtComando = "Select FK_codTipo,dpi,nombre,apellido,fechaNacimiento,correo,telefono,usuario,contraseña,palabraClave from trabajador where idTrabajador = " + Convert.ToInt32(txtCodigoCliente.Text) + 
+                " and estadoCuenta = " + 1;
             SqlConnection conexion = new SqlConnection("Data Source=ORDENADOR\\SQLEXPRESS;Initial Catalog=ProyectoIPC2;Integrated Security=True");
             SqlCommand comando = new SqlCommand(txtComando, conexion);
             conexion.Open();
@@ -168,7 +180,6 @@ namespace Proyecto_IPC2.Modulo.Admin
             {
                 mensajeAlerta("Sin Resultados!");
                 LimpiarCampos();
-                //throw;
             }
             conexion.Close();
         }

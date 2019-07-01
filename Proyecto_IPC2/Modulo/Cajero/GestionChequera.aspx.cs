@@ -2,10 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Proyecto_IPC2.Modulo.Cajero
 {
@@ -148,7 +144,8 @@ namespace Proyecto_IPC2.Modulo.Cajero
                 " group by cantidadActual", conexion);
             conexion.Open();
             SqlDataReader lectorChequera = buscarChequeraDisponible.ExecuteReader();
-            if (lectorChequera.Read()) //Si hay chequeras disponibles en el lote más próximo, entonces tomo el código de LOTE
+            //Si hay chequeras disponibles en el lote más próximo, entonces tomo el código de LOTE
+            if (lectorChequera.Read()) 
             {
                 //Si no hay más chequeras disponibles
                 if ((int)lectorChequera["cantidadActual"] <= 0)
@@ -181,7 +178,7 @@ namespace Proyecto_IPC2.Modulo.Cajero
             }
             else
             {
-                mensaje("No hay chequeras disponibles.");
+                mensaje("No hay chequeras disponibles. \\nComuniquese con el Administrador");
                 limpiar();
                 btnOperacion.Enabled = false;
             }
@@ -322,6 +319,7 @@ namespace Proyecto_IPC2.Modulo.Cajero
                             item.hora + "')", conexion);
                         //Este cuatro impedirá que se entre de nuevo, los datos de la lista que ya se encuentren en la BD
                         item.estadoChequera = 4;
+                        //Si lo pongo en cero, se volverá a contar el turno :(
                         conexion.Open();
                         comando.ExecuteNonQuery();
                         conexion.Close();
